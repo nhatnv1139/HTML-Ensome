@@ -26,8 +26,8 @@ export default {
       },
       {
         id: 2,
-        name: "Solutions",
-        url: "/",
+        name: "services",
+        url: "/services",
       },
       {
         id: 3,
@@ -36,18 +36,18 @@ export default {
       },
       {
         id: 4,
-        name: "Elements",
-        url: "/",
+        name: "solution",
+        url: "/solution",
       },
       {
         id: 5,
-        name: "Blog",
-        url: "/",
+        name: "FAQs",
+        url: "/FAQs",
       },
       {
         id: 6,
-        name: "Contacts",
-        url: "/",
+        name: "OutTeam",
+        url: "/OutTeam",
       },
     ];
     return {

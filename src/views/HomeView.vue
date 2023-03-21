@@ -90,20 +90,29 @@
           <!-- <ButtonForm textButton="Learn more" /> -->
         </div>
       </div>
+      <BlogSession />
+      <Review />
+      <ComponentFull :isAnalysis="true" />
+      <div class="home-contact">
+        <Consultation />
+        <ContactUs />
+      </div>
+      <ComponentFull :isEmail="true" />
     </BasePages>
     <!-- <img alt="Vue logo" src="@/assets/logo.png" /> -->
-    <HorizontalMenu msg="Welcome to Your Vue.js App" />
-    <ComponentFull :isEmail="true" />
-    <Consultation />
-    <ContactUs />
-    <Footer />
+    <!-- <HorizontalMenu msg="Welcome to Your Vue.js App" /> -->
+    <!-- <ComponentFull :isEmail="true" /> -->
+    <!-- <Footer /> -->
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HorizontalMenu from "@/components/HorizontalMenu.vue";
-import Footer from "@/components/Footer.vue";
+// import HorizontalMenu from "@/components/HorizontalMenu.vue";
+// import Footer from "@/components/Footer.vue";
+import Review from "@/components/Review.vue";
+import BlogSession from "@/components/BlogSession.vue";
+
 import ComponentFull from "@/components/ComponentFull.vue";
 import ContactUs from "@/components/ContactUs/ContactUs.vue";
 import Consultation from "@/components/ContactUs/Consultation.vue";
@@ -119,13 +128,15 @@ import card from "@/assets/card.png";
 export default {
   name: "HomeView",
   components: {
-    HorizontalMenu,
-    Footer,
+    // HorizontalMenu,
+    // Footer,
     ComponentFull,
     ContactUs,
     Consultation,
     BasePages,
     ButtonForm,
+    Review,
+    BlogSession,
   },
   setup() {
     const cardHome = [
@@ -177,6 +188,8 @@ export default {
   align-items: center;
   gap: 95px;
   padding-top: 30px;
+  max-width: 1100px;
+  margin: auto;
 }
 .home_header_img_option {
   width: 50%;
@@ -291,5 +304,12 @@ export default {
   font-weight: 400;
   font-size: 16px;
   line-height: 28px;
+}
+.home-contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1110px;
+  margin: auto;
 }
 </style>

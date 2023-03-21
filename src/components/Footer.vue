@@ -98,7 +98,7 @@ import social3 from "@/assets/l.png";
 import social4 from "@/assets/youtube.png";
 import social5 from "@/assets/4social.png";
 import social6 from "@/assets/6.png";
-import iconRight from "@/assets/Vector.png";
+import iconRight from "@/assets/right.png";
 
 export default {
   name: "FooterComponent",
