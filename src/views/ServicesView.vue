@@ -193,4 +193,12 @@ export default {
   text-align: center;
   color: #185cff;
 }
+@media only screen and (max-width: 600px) {
+  .home_card {
+    grid-template-columns: auto;
+    padding-top: 110px;
+    padding: 110px 44px 0px;
+    width: 100%;
+  }
+}
 </style>

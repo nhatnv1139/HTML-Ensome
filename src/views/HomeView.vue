@@ -193,11 +193,13 @@ export default {
 }
 .home_header_img_option {
   width: 50%;
+  text-align: right;
 }
 .home_header_img_option > img {
   width: 766px;
   width: 100%;
   height: 590px;
+  float: right;
 }
 .home_header_container {
   width: 50%;

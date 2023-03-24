@@ -3,8 +3,10 @@
     <div class="main_full">
       <div class="analysis" v-if="isAnalysis">
         <div v-for="item in analysis" :key="item.id">
-          <div class="analysis_count">{{ item.count }}</div>
-          <div class="analysis_name">{{ item.name }}</div>
+          <div class="analysis_item">
+            <div class="analysis_count">{{ item.count }}</div>
+            <div class="analysis_name">{{ item.name }}</div>
+          </div>
         </div>
       </div>
       <div class="email" v-if="isEmail">
@@ -18,7 +20,7 @@
         </div>
         <div class="email_input">
           <input type="text" placeholder="email" />
-          <button>Send</button>
+          <div class="button">Send</div>
         </div>
         <!-- </div> -->
       </div>
@@ -74,6 +76,8 @@ export default {
   justify-content: space-between;
   align-items: center;
 }
+.analysis_item {
+}
 .analysis_count {
   font-family: "Open Sans";
   font-style: normal;
@@ -123,11 +127,52 @@ export default {
   border: none;
   outline: none;
 }
-.email_input > button {
+.button {
   justify-content: center;
   align-items: center;
   border-radius: 6px;
   padding: 11px 46px;
   border: none;
+  background: #ffffff;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+@media only screen and (max-width: 600px) {
+  .analysis {
+    display: block;
+    text-align: center;
+  }
+  .analysis_item {
+    margin-bottom: 70px;
+  }
+  .email_subtitle {
+    display: none;
+  }
+  .email {
+    width: 100%;
+    display: block;
+    padding: 50px 16px;
+  }
+  .email_info {
+    text-align: center;
+  }
+  .email_input > input {
+    font-weight: 600;
+    width: 100%;
+    font-size: 14px;
+    line-height: 24px;
+    color: #c9dcec;
+    background: none;
+    border: 1px solid #c9dcec;
+    margin-bottom: 24px;
+  }
+  .button {
+    text-align: center;
+  }
+  .email_input {
+    display: block;
+  }
 }
 </style>

@@ -37,8 +37,8 @@ export default {
 
 <style scoped>
 .consultation-main {
-  max-width: 1110px;
-  margin: auto;
+  /* max-width: 1110px;
+  margin: auto; */
 }
 .consultation_container {
   max-width: 540px;

@@ -7,12 +7,27 @@
           <div class="home">Home</div>
           <div class="Services">Solutions</div>
         </div>
-        <div class="">
-
+        <div class="solution_text">
+          <div class="text_left">
+            Technology doesn't just help businesses — it allows them to extract
+            business value from vast big of data.
+          </div>
+          <div class="text_right">
+            <div class="text_right_title">
+              Phasellus tristique eu nisl eu consectetur. Morbi urna massa,
+              imperdiet in mauris et, euismod vestibulum lacus. Integer enim
+              elit, tincidunt aliquam ligula.
+            </div>
+            <div class="text_right_btn">
+              <ButtonForm textButton="See pricing" />
+              <ButtonForm textButton="Contact Us" />
+            </div>
+          </div>
         </div>
+        <div class="title">Our solutions</div>
         <div class="home_card">
           <div v-for="item in cardHome" :key="item" class="home_card_main">
-            <img :src="item.card" alt="" />
+            <!-- <img :src="item.card" alt="" /> -->
             <div class="home_out_team"></div>
 
             <div class="home_card_title">{{ item.title }}</div>
@@ -38,7 +53,7 @@
 <script>
 import Review from "@/components/Review.vue";
 // import BlogSession from "@/components/BlogSession.vue";
-
+import ButtonForm from "@/components/ButtonForm.vue";
 import ComponentFull from "@/components/ComponentFull.vue";
 import ContactUs from "@/components/ContactUs/ContactUs.vue";
 import Consultation from "@/components/ContactUs/Consultation.vue";
@@ -60,7 +75,7 @@ export default {
     ContactUs,
     Consultation,
     BasePages,
-    // ButtonForm,
+    ButtonForm,
     Review,
     // BlogSession,
   },
@@ -170,20 +185,21 @@ export default {
   /* width: 100%; */
 
   padding-bottom: 100px;
-  padding-top: 280px;
+  padding-top: 30px;
 }
 .home_card_main {
   /* padding: 46px 35px; */
   box-shadow: 0px 12px 30px 17px rgba(24, 92, 255, 0.04);
-  border-radius: 6px;
-  text-align: center;
+  /* border-radius: 6px; */
+  /* text-align: center; */
+  border-top: 6px solid #185cff;
+  padding: 41px 35px 35px;
 }
 .home_card_title {
   font-style: normal;
-  font-weight: 700;
-  font-size: 22px;
-  line-height: 33px;
-  color: #292d33;
+font-weight: 700;
+font-size: 22px;
+line-height: 33px;
   padding: 30px 0px 16px;
 }
 .home_card_content {
@@ -196,10 +212,37 @@ export default {
   padding-bottom: 30px;
 }
 .home_card_icon {
-  text-align: center;
   color: #185cff;
 }
 img {
   border-radius: 6px 6px 0px 0px;
+}
+.solution_text {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 125px;
+  margin-top: 280px;
+}
+.text_left {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 40px;
+  color: #292d33;
+  /* max-width: 445px; */
+}
+.text_right_btn {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+.text_right_title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 33px;
+  color: #9497a1;
+  margin-bottom: 30px;
 }
 </style>

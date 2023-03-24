@@ -29,10 +29,15 @@ export default {
         name: "services",
         url: "/services",
       },
+       {
+        id: 2,
+        name: "BlogView",
+        url: "/BlogView",
+      },
       {
         id: 3,
-        name: "Pages",
-        url: "/",
+        name: "AboutUs",
+        url: "/AboutUs",
       },
       {
         id: 4,
