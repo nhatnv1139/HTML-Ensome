@@ -8,11 +8,34 @@
           <div><img :src="thang" alt="" /></div>
           <div class="Services">Blog list</div>
         </div>
+        <div class="search_blog_mb">
+          <div class="btn_search">
+            <input type="text" placeholder="Search" class="input" />
+            <div class="btn">Search</div>
+          </div>
+          <div class="category_mb">
+            <div class="item_category">
+              <div class="input_side">All categories</div>
+              <img :src="down" alt="" class="input_side_img" />
+            </div>
+            <!-- <div class="item_right">Tags</div> -->
+            <div class="item_tag_child">
+              <div v-for="e in Tags" :key="e" class="item_tags">
+                <div class="tags_name" :class="{ active: e.id == 1 }">
+                  {{ e.name }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="blog">
           <div class="blog_main">
             <div class="item_blog">
               <div class="itemChild" v-for="item in cardHome" :key="item.id">
-                <img :src="item.card" alt="" />
+                <div class="img_blog_item">
+                  <img :src="item.card" alt="" />
+                </div>
                 <div class="item_time">
                   {{ item.time }}
                 </div>
@@ -95,6 +118,8 @@ import logo_1 from "@/assets/logo_2.png";
 import img from "@/assets/img_10.png";
 import img8 from "@/assets/img_8.png";
 import img9 from "@/assets/456.png";
+import down from "@/assets/down.png";
+
 
 export default {
   name: "solutionApp",
@@ -194,7 +219,7 @@ export default {
       img8,
       category,
       img9,
-      Tags,
+      Tags,down
     };
   },
 };
@@ -381,5 +406,75 @@ export default {
 .item_tag_child {
   display: flex;
   justify-content: flex-start;
+}
+.search_blog_mb {
+  display: none;
+}
+@media only screen and (max-width: 600px) {
+  .blog {
+    padding: 50px 16px;
+  }
+  .search_blog_mb {
+    display: block;
+    padding: 110px 16px 0px;
+  }
+  .item_category {
+    padding-top: 20px;
+  }
+  .input_side {
+    padding: 15px 25px;
+    border: 1px solid #292d33;
+    border-radius: 6px;
+  }
+  .input_side_img {
+    right: 20px;
+  }
+  .item_tag_child {
+    padding-top: 20px;
+  }
+  .blog_main {
+    display: block;
+  }
+  .item_blog {
+    width: 100%;
+  }
+  /* .item_blog img {
+    text-align: center;
+  } */
+  .img_blog_item {
+    display: flex;
+    justify-content: center;
+  }
+  .img_blog_item img {
+    max-width: 328px;
+  }
+  .item_time {
+    padding: 18px 0px 10px;
+  }
+  .item_title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #292d33;
+    padding-bottom: 10px;
+  }
+  .item_subtitle {
+    padding: 0px 0px 10px;
+  }
+  .btn_search {
+    display: none;
+  }
+  .sub_item_blog {
+    width: 100%;
+  }
+  .item_right {
+    padding: 25px 0px 20px;
+  }
+  .item_log {
+    padding: 16px 0px;
+  }  .title {
+    padding-top: 36px;
+  }
 }
 </style>

@@ -61,6 +61,9 @@ img {
   .btn {
     display: none;
   }
+  .header_container {
+    padding: 20px 0px;
+  }
 }
 </style>
 >

@@ -33,7 +33,7 @@
     </div>
     <div class="footer_media">
       <div class="footer_media_contact">
-        <div class="footer_media_contact-name">Contacts</div>
+        <div class="footer_media_contact-name footer_mb">Contacts</div>
         <div class="footer_media_contact-content">
           <div class="footer_media-phone">
             <p>+1 601-201-5580</p>
@@ -69,8 +69,13 @@
         </div>
       </div>
     </div>
+    <div>
+      <li v-for="item in About" :key="item.id" class="footer_content_item">
+        {{ item.name }}
+      </li>
+    </div>
     <div class="footer_media">
-      <div>
+      <div class="footer_subMedia">
         <span class="footer_policy">Privacy policy</span
         ><span class="footer_policy"
           ><img
@@ -86,7 +91,7 @@
             alt=""
         /></span>
       </div>
-      <div class="footer_policy">© 2022 Ensome. All Rights Reserved.</div>
+      <div class="footer_policy_end">© 2022 Ensome. All Rights Reserved.</div>
     </div>
   </div>
 </template>
@@ -263,5 +268,77 @@ export default {
   font-size: 14px;
   line-height: 24px;
   color: #9497a1;
+}
+.footer_policy_end {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #9497a1;
+}
+@media only screen and (max-width: 600px) {
+  .analysis {
+    display: block;
+    text-align: center;
+  }
+  .footer_main {
+    border-bottom: none;
+    display: block;
+    padding: 50px 0px 20px 0px;
+  }
+  .footer_content_header {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .footer_content {
+    padding: 16px 0px;
+    border-bottom: 1px solid #9497a1;
+  }
+  .footed_contact {
+    display: block;
+  }
+  .footer_content_item {
+    display: none;
+  }
+  .footer_media {
+    display: block;
+    border-bottom: none;
+    padding: 0px 0px 30px;
+  }
+  .footer_media_main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer_container {
+    padding: 0 16px;
+  }
+  .footer_media-phone {
+    display: none;
+  }
+  .footer_media div span > img {
+    display: none;
+  }
+  .footer_media div span {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: #292d33;
+    margin-right: 15px;
+  }
+  .footer_subMedia {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #9497a1;
+  }
+  .footer_policy_end {
+    padding-top: 10px;
+  }
+  .footer_mb {
+    display: none;
+  }
 }
 </style>

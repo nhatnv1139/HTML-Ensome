@@ -11,15 +11,23 @@
           <div v-for="item in cardHome" :key="item" class="home_card_main">
             <img :src="item.card" alt="" />
             <div class="home_out_team">
-
+              <div class="name_person">
+                <div class="name">Sargis Grigor</div>
+                <div class="position">Data analyst</div>
+              </div>
+              <div class="contact_person">
+                <img :src="social1" alt="" />
+                <img :src="social1" alt="" />
+                <img :src="social1" alt="" />
+              </div>
             </div>
 
-            <div class="home_card_title">{{ item.title }}</div>
+            <!-- <div class="home_card_title">{{ item.title }}</div>
             <div class="home_card_content">{{ item.content }}</div>
             <div class="home_card_icon">
               <div>Read more</div>
               <img src="" alt="" />
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -49,6 +57,7 @@ import illustration1 from "@/assets/illustration1.png";
 import play from "@/assets/Vector.png";
 import logo_1 from "@/assets/logo_1.svg";
 import person from "@/assets/123person.png";
+import social1 from "@/assets/fa.png";
 
 export default {
   components: {
@@ -114,6 +123,7 @@ export default {
       person,
       cardHome,
       illustration1,
+      social1,
     };
   },
 };
@@ -199,5 +209,42 @@ export default {
 }
 img {
   border-radius: 6px 6px 0px 0px;
+}
+.home_out_team {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 16px;
+}
+.name_person {
+  padding: 20px 0px 0px 20px;
+}
+.contact_person {
+  padding: 20px 20px 0px 0px;
+}
+.contact_person img {
+  margin-right: 10px;
+}
+.name {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  color: #292d33;
+  padding-bottom: 6px;
+}
+.position {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: #9497a1;
+}
+@media only screen and (max-width: 600px) {
+  .home_card {
+    grid-template-columns: auto;
+    padding-top: 108px;
+  }  .title {
+    padding-top: 36px;
+  }
 }
 </style>

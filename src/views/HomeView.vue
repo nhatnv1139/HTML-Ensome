@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <BasePages>
-      <div class="home_header">
+      <div class="home_header home_pc">
         <div class="home_header_container">
           <div class="home_title">Find true power in your data with Ensome</div>
           <div class="home_subtitle">
@@ -19,18 +19,41 @@
           </div>
           <!-- <ButtonForm textButton="Learn more" /> -->
         </div>
+
         <div class="home_header_img">
           <img :src="illustration" alt="" />
         </div>
       </div>
+      <!-- mb -->
+
+      <div class="home_header home_mb">
+        <div class="home_header_img">
+          <img :src="illustration" alt="" />
+        </div>
+        <div class="home_header_container">
+          <div class="home_title">Find true power in your data with Ensome</div>
+          <div class="home_subtitle">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+            quae ab illo inventore veritatis et quasi architecto beatae vitae
+            dicta sunt explicabo.
+          </div>
+          <div class="home_btn">
+            <ButtonForm textButton="Learn more" class="btn_learn" />
+            <ButtonForm textButton="Watch the demo" :icon="true" />
+          </div>
+        </div>
+      </div>
+
       <div class="home_logo">
         <img :src="logo_1" alt="" />
         <img :src="logo_1" alt="" />
         <img :src="logo_1" alt="" />
         <img :src="logo_1" alt="" />
-        <img :src="logo_1" alt="" />
-        <img :src="logo_1" alt="" />
+        <!-- <img :src="logo_1" alt="" />
+        <img :src="logo_1" alt="" /> -->
       </div>
+
       <div class="home_advance">
         <div class="home_advance_title">Why our clients chosse Ensome?</div>
         <div class="home_advance_subtitle">
@@ -46,7 +69,9 @@
           <div class="home_card_content">{{ item.content }}</div>
         </div>
       </div>
-      <div class="home_header">
+      <!-- mb -->
+
+      <div class="home_header home_pc">
         <div class="home_header_container">
           <div class="home_title">Find true power in your data with Ensome</div>
           <div class="home_subtitle">
@@ -57,18 +82,30 @@
           </div>
           <div class="home_btn">
             <ButtonForm textButton="Learn more" />
-            <!-- <div class="btn_noBG">
-              <img :src="play" alt="" />
-              <div class="bt_text_main">Watch the demo</div>
-            </div> -->
           </div>
-          <!-- <ButtonForm textButton="Learn more" /> -->
         </div>
         <div class="home_header_img">
           <img :src="illustration1" alt="" />
         </div>
       </div>
-      <div class="home_header_option">
+      <div class="home_header home_mb">
+        <div class="home_header_img">
+          <img :src="illustration" alt="" />
+        </div>
+        <div class="home_header_container">
+          <div class="home_title">Find true power in your data with Ensome</div>
+          <div class="home_subtitle">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+            quae ab illo inventore veritatis et quasi architecto beatae vitae
+            dicta sunt explicabo.
+          </div>
+          <div class="home_btn">
+            <ButtonForm textButton="Discover more" class="btn_learn" />
+          </div>
+        </div>
+      </div>
+      <div class="home_header_option home_pc">
         <div class="home_header_img_option">
           <img :src="illustration1" alt="" />
         </div>
@@ -82,20 +119,32 @@
           </div>
           <div class="home_btn">
             <ButtonForm textButton="Learn more" />
-            <!-- <div class="btn_noBG">
-              <img :src="play" alt="" />
-              <div class="bt_text_main">Watch the demo</div>
-            </div> -->
           </div>
-          <!-- <ButtonForm textButton="Learn more" /> -->
+        </div>
+      </div>
+      <div class="home_header home_mb">
+        <div class="home_header_img">
+          <img :src="illustration" alt="" />
+        </div>
+        <div class="home_header_container">
+          <div class="home_title">Find true power in your data with Ensome</div>
+          <div class="home_subtitle">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+            quae ab illo inventore veritatis et quasi architecto beatae vitae
+            dicta sunt explicabo.
+          </div>
+          <div class="home_btn">
+            <ButtonForm textButton="Discover more" class="btn_learn" />
+          </div>
         </div>
       </div>
       <BlogSession />
       <Review />
       <ComponentFull :isAnalysis="true" />
       <div class="home-contact">
-        <Consultation />
-        <ContactUs />
+        <Consultation class="home_contact_consultation" />
+        <ContactUs class="home_contact_contactUS" />
       </div>
       <ComponentFull :isEmail="true" />
     </BasePages>
@@ -282,8 +331,8 @@ export default {
 .home_card {
   max-width: 1100px;
   margin: auto;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto auto auto;
   gap: 30px;
   padding-bottom: 100px;
 }
@@ -313,5 +362,53 @@ export default {
   justify-content: space-between;
   max-width: 1110px;
   margin: auto;
+}
+.home_mb {
+  display: none;
+}
+@media only screen and (max-width: 600px) {
+  .home-contact {
+    display: block;
+    padding: 0px 16px;
+  }
+  .home_contact_contactUS {
+    display: none;
+  }
+  .home_pc {
+    display: none;
+  }
+  .home_mb {
+    display: block;
+  }
+  .home_header_img {
+    /* display: flex;
+    justify-content: center; */
+  }
+  .home_header_img img {
+    max-width: 354px;
+  }
+  .home_header_container {
+    padding: 0px 16px;
+    width: 100%;
+  }
+  .home_title {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 40px;
+    padding: 30px 0px 20px;
+  }
+  .home_btn {
+    display: block;
+  }
+  .btn_learn {
+    margin-bottom: 20px;
+  }
+  .home_logo img {
+    width: 25%;
+  }
+  .home_card {
+    grid-template-columns: auto;
+  }
 }
 </style>

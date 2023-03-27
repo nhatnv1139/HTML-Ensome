@@ -130,4 +130,36 @@ export default {
   box-shadow: 0px 4px 12px rgba(12, 68, 204, 0.1);
   border-radius: 6px;
 }
+@media only screen and (max-width: 600px) {
+  .review_main {
+    padding: 50px 16px;
+  }
+  .review_header {
+    display: block;
+  }
+  .title {
+    text-align: center;
+  }
+  .icon_button {
+    text-align: right;
+    margin-top: 24px;
+    /* width: 104px;
+    height: 40px; */
+  }
+  .icon_button img {
+    width: 50px;
+    height: 40px;
+    padding: 0px;
+  }
+  .imgLeft {
+    padding-right: 8px;
+  }
+  .review_item {
+    /* width: 272px; */
+    display: block;
+  }
+  .review_child {
+    padding-top: 20px;
+  }
+}
 </style>

@@ -25,13 +25,21 @@
           1642 Washington Avenue, Jackson, MS, Mississippi, 39201
         </div>
       </div>
+      <div class="btn_consultation">
+        <ButtonForm textButton="Contact US" />
+      </div>
     </div>
   </div>
 </template>
 
+
 <script>
+import ButtonForm from "@/components/ButtonForm.vue";
 export default {
   name: "ConsultationP",
+  components:{
+    ButtonForm
+  }
 };
 </script>
 
@@ -71,7 +79,7 @@ export default {
   font-size: 16px;
   line-height: 28px;
   margin-bottom: 2px;
-  color: #9497a1;   
+  color: #9497a1;
 }
 .subtitle {
   font-family: "Open Sans";
@@ -80,5 +88,33 @@ export default {
   font-size: 16px;
   line-height: 28px;
   color: #292d33;
+}
+.btn_consultation{
+  display: none;
+}
+@media only screen and (max-width: 600px) {
+  .home_card {
+    grid-template-columns: auto;
+    padding-top: 110px;
+    padding: 110px 44px 0px;
+    width: 100%;
+  }
+  .consultation_heard{
+    padding-bottom: 0px;
+  }
+  .home-contact {
+    display: block;
+    padding: 0px 16px;
+  }
+  .consultation_heard > p {
+    display: none;  
+  }
+  .btn_consultation{
+  display: block;
+  padding-bottom: 60px;
+}
+.consultation_container{
+  padding-top: 60px;
+}
 }
 </style>

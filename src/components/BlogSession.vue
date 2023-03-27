@@ -80,9 +80,8 @@ export default {
   text-align: center;
 }
 .blog_content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: auto auto auto;
   gap: 30px;
   padding-top: 50px;
 }
@@ -136,5 +135,9 @@ export default {
   padding-top: 50px;
   text-align: center;
 }
-
+@media only screen and (max-width: 600px) {
+  .blog_content {
+    grid-template-columns: auto ;
+  }
+}
 </style>

@@ -19,8 +19,8 @@
               elit, tincidunt aliquam ligula.
             </div>
             <div class="text_right_btn">
-              <ButtonForm textButton="See pricing" />
-              <ButtonForm textButton="Contact Us" />
+              <ButtonForm textButton="See pricing" class="btn" />
+              <ButtonForm textButton="Contact Us" class="btn_down" />
             </div>
           </div>
         </div>
@@ -43,8 +43,8 @@
       <ComponentFull :isAnalysis="true" />
       <Review />
       <div class="home-contact">
-        <Consultation />
-        <ContactUs />
+        <Consultation class="home_contact_consultation" />
+        <ContactUs class="home_contact_contactUS" />
       </div>
       <ComponentFull :isEmail="true" />
     </BasePages>
@@ -197,9 +197,9 @@ export default {
 }
 .home_card_title {
   font-style: normal;
-font-weight: 700;
-font-size: 22px;
-line-height: 33px;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 33px;
   padding: 30px 0px 16px;
 }
 .home_card_content {
@@ -244,5 +244,41 @@ img {
   line-height: 33px;
   color: #9497a1;
   margin-bottom: 30px;
+}
+@media only screen and (max-width: 600px) {
+  .title {
+    padding-top: 36px;
+  }
+  .service_main {
+    padding: 0px 16px;
+  }
+  .solution_text {
+    display: block;
+    padding-top: 110px;
+    margin: 0px;
+  }
+  .home-contact {
+    display: block;
+    padding: 0px 16px;
+  }
+  .home_contact_contactUS {
+    display: none;
+  }
+  .text_left {
+    margin-bottom: 20px;
+  }
+  .text_right_btn {
+    display: block;
+    padding-bottom: 14px;
+  }
+  .btn {
+    margin-bottom: 20px;
+  }
+  .btn_down {
+    padding-bottom: 14px;
+  }
+  .home_card {
+    grid-template-columns: auto;
+  }
 }
 </style>

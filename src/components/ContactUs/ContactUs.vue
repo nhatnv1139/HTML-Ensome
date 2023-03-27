@@ -43,7 +43,7 @@ export default {
 
 <style scoped>
 .form_contact {
-  width: 445px;
+  max-width: 445px;
   box-shadow: 0px 12px 30px 17px rgba(24, 92, 255, 0.04);
   border-radius: 6px;
   padding: 50px;

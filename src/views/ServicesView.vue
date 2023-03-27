@@ -25,8 +25,8 @@
       <Review /> -->
       <ComponentFull :isAnalysis="true" />
       <div class="home-contact">
-        <Consultation />
-        <ContactUs />
+        <Consultation class="home_contact_consultation" />
+        <ContactUs class="home_contact_contactUS" />
       </div>
       <ComponentFull :isEmail="true" />
     </BasePages>
@@ -199,6 +199,16 @@ export default {
     padding-top: 110px;
     padding: 110px 44px 0px;
     width: 100%;
+  }
+  .home-contact {
+    display: block;
+    padding: 0px 16px;
+  }
+  .home_contact_contactUS {
+    display: none;
+  }
+  .title {
+    padding-top: 36px;
   }
 }
 </style>

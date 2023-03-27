@@ -18,10 +18,30 @@
             <div class="text_right_content" v-for="e in popular" :key="e">
               <div class="text_right_content_title">
                 {{ e.title }}
+                <img :src="down" alt="" class="img_text_right" />
               </div>
               <div class="text_right_content_end" v-if="e.content">
                 {{ e.content }}
               </div>
+            </div>
+          </div>
+        </div>
+        <div class="solution_text_mb">
+          <div class="text_right">
+            <div class="text_right_content" v-for="e in popular" :key="e">
+              <div class="text_right_content_title">
+                {{ e.title }}
+                <img :src="down" alt="" class="img_text_right" />
+              </div>
+              <div class="text_right_content_end" v-if="e.content">
+                {{ e.content }}
+              </div>
+            </div>
+          </div>
+          <div class="text_left">
+            <div class="text_left_title">Popular articles</div>
+            <div class="text_left_content" v-for="e in popular" :key="e">
+              {{ e.title }}
             </div>
           </div>
         </div>
@@ -31,8 +51,8 @@
       <!-- <Review /> -->
 
       <div class="home-contact">
-        <Consultation />
-        <ContactUs />
+        <Consultation class="home_contact_consultation" />
+        <ContactUs class="home_contact_contactUS" />
       </div>
       <ComponentFull :isEmail="true" />
     </BasePages>
@@ -52,6 +72,7 @@ import illustration1 from "@/assets/illustration1.png";
 import play from "@/assets/Vector.png";
 import logo_1 from "@/assets/logo_1.svg";
 import person from "@/assets/123person.png";
+import down from "@/assets/down.png";
 
 export default {
   name: "solutionApp",
@@ -108,6 +129,7 @@ export default {
       person,
       popular,
       illustration1,
+      down,
     };
   },
 };
@@ -236,6 +258,13 @@ img {
   line-height: 24px;
   border-bottom: 1px solid #9497a1;
 }
+.text_right {
+}
+.img_text_right {
+  position: absolute;
+  top: 20px;
+  right: 0;
+}
 .text_right_btn {
   display: flex;
   justify-content: flex-start;
@@ -259,6 +288,7 @@ img {
   font-weight: 700;
   font-size: 22px;
   line-height: 33px;
+  position: relative;
   color: #292d33;
   /* padding: 30px; */
 }
@@ -270,5 +300,49 @@ img {
   line-height: 33px;
   color: #9497a1;
   padding: 30px 0px;
+}
+.solution_text_mb {
+  display: none;
+}
+@media only screen and (max-width: 600px) {
+  .solution_text {
+    display: none;
+  }
+  .solution_text_mb {
+    padding: 100px 16px 0px;
+    display: block;
+  }
+  .text_left {
+    width: 100%;
+  }
+  .text_left_title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 33px;
+    color: #292d33;
+    padding-top: 50px;
+  }
+  .text_right_content_title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .text_left_content {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .home-contact {
+    display: block;
+    padding: 0px 16px;
+  }
+  .home_contact_contactUS {
+    display: none;
+  }
+  .title {
+    padding-top: 36px;
+  }
 }
 </style>
