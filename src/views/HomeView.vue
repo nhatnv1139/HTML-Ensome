@@ -45,13 +45,19 @@
         </div>
       </div>
 
-      <div class="home_logo">
+      <div class="home_logo home_pc">
         <img :src="logo_1" alt="" />
         <img :src="logo_1" alt="" />
         <img :src="logo_1" alt="" />
         <img :src="logo_1" alt="" />
-        <!-- <img :src="logo_1" alt="" />
-        <img :src="logo_1" alt="" /> -->
+        <img :src="logo_1" alt="" />
+        <img :src="logo_1" alt="" />
+      </div>
+      <div class="home_logo home_mb">
+        <img :src="logo_1" alt="" />
+        <img :src="logo_1" alt="" />
+        <img :src="logo_1" alt="" />
+        <img :src="logo_1" alt="" />
       </div>
 
       <div class="home_advance">
