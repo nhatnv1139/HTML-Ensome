@@ -69,11 +69,6 @@
         </div>
       </div>
     </div>
-    <div>
-      <li v-for="item in About" :key="item.id" class="footer_content_item">
-        {{ item.name }}
-      </li>
-    </div>
     <div class="footer_media">
       <div class="footer_subMedia">
         <span class="footer_policy">Privacy policy</span
